@@ -1,18 +1,165 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafafa;
+    color: #212121;
+    line-height: 1.5;
+    margin: 16px;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1 {
+    margin-bottom: 24px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #4e75ff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline; }
+        * {
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #fafafa;
+            color: #212121;
+            line-height: 1.5;
+            margin: 16px;
+        }
+    
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    
+        a {
+            color: #4e75ff;
+            text-decoration: none;
+        }
+    
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+    
+        /* Gallery styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .gallery-item {
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+    
+        .gallery-link {
+            display: block;
+            text-decoration: none;
+            height: 100%;
+        }
+    
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+    
+        /* Form styles */
+        .feedback-form {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            border-radius: 8px;
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+                0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+        }
+    
+        .feedback-form label {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    
+        .feedback-form input,
+        .feedback-form textarea {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #808080;
+            border-radius: 4px;
+            resize: none;
+        }
+    
+        .feedback-form input:focus,
+        .feedback-form textarea:focus {
+            outline: 2px solid #4e75ff;
+            border-color: transparent;
+        }
+    
+        .feedback-form button {
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #4e75ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    
+        .feedback-form button:hover,
+        .feedback-form button:focus {
+            background-color: #6c8cff;     }
