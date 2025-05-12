@@ -3,9 +3,9 @@ import htmlInject from 'vite-plugin-html-inject';
 import path from 'path';
 
 export default defineConfig({
+  base: '/goit-js-hw-09/', // добавляем base сюда
   plugins: [
     htmlInject({
-      // Обрабатывает все .html файлы и вставляет partials
       injectData: {},
     }),
   ],
