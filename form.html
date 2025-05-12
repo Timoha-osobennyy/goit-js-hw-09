@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <img src="/vanilla-app-template/assets/vite-logo-9o_aqrTe.png" alt="Vite logo">
+    
+  <script type="module" crossorigin src="/vanilla-app-template/form.js"></script>
+  <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/modulepreload-polyfill-B5Qt9EMX.js">
+</head>
+
+<body>
+   
+    <header></header>
+
+    <main>
+        <form class="feedback-form" autocomplete="off">
+            <label for="email">
+                Email
+                <input type="email" id="email" name="email" autofocus required />
+            </label>
+            <label for="message">
+                Message
+                <textarea id="message" name="message" rows="8" required></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <footer></footer>
+
+
+
+    <script>
+
+        async function loadPartial(selector, url) {
+            const element = document.querySelector(selector);
+            if (element) {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error('Ошибка загрузки: ' + url);
+                    element.innerHTML = await response.text();
+                } catch (err) {
+                    console.error(err);
+                }
+            }
+        }
+
+        loadPartial('header', './partials/header.html');
+        loadPartial('footer', './partials/footer.html');
+    </script>
+</body>
+
+</html>
