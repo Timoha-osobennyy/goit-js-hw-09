@@ -1,7 +1,24 @@
 {
   "name": "goit-js-hw-09",
   "version": "1.0.0",
+  "description": "",
   "main": "form.js",
+  "scripts": {
+    "build": "vite build --base=/goit-js-hw-09/",
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Timoha-osobennyy/goit-js-hw-09.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Timoha-osobennyy/goit-js-hw-09/issues"
+  },
+  "homepage": "https://Timoha-osobennyy.github.io/goit-js-hw-09/",
   "dependencies": {
     "ansi-regex": "^6.0.1",
     "ansi-styles": "^6.2.1",
@@ -49,21 +66,5 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
-  },
-  "scripts": {
-    "build": "vite build",
-    "deploy": "gh-pages -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Timoha-osobennyy/goit-js-hw-09.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Timoha-osobennyy/goit-js-hw-09/issues"
-  },
-  "homepage": "https://github.com/Timoha-osobennyy/goit-js-hw-09#readme",
-  "description": ""
+  }
 }
