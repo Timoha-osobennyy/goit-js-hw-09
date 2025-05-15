@@ -1,3 +1,4 @@
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 async function loadPartials() {
     const loadElements = document.querySelectorAll('load[src]');
