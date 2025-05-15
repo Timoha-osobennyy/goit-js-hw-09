@@ -1,0 +1,2 @@
+import"./assets/styles-_59rMWw2.js";async function s(){const n=document.querySelectorAll("load[src]");for(const e of n){const o=e.getAttribute("src");if(o)try{const t=await fetch(o);if(t.ok){const r=await t.text();e.innerHTML=r}else e.innerHTML=`<p style="color:red">Ошибка загрузки: ${t.status}</p>`}catch(t){e.innerHTML=`<p style="color:red">Ошибка загрузки: ${t.message}</p>`}}}document.addEventListener("DOMContentLoaded",s);
+//# sourceMappingURL=index.js.map
