@@ -1,3 +1,4 @@
+import './css/styles.css';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 async function loadPartials() {

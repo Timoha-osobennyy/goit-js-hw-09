@@ -4,6 +4,7 @@ import path from 'path';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 
+
 const htmlEntries = {};
 glob.sync('./src/*.html').forEach(file => {
   const name = path.basename(file, path.extname(file));
@@ -12,11 +13,11 @@ glob.sync('./src/*.html').forEach(file => {
 
 export default defineConfig(({ command }) => ({
   define: {
-    [command === 'serve' ? 'global' : '_global']: {}, 
+    [command === 'serve' ? 'global' : '_global']: {},
   },
   root: 'src',
   build: {
-    base: '/goit-js-hw-09/',
+    base: '/goit-js-hw-09/', 
     sourcemap: true,
     rollupOptions: {
       input: htmlEntries,
@@ -35,11 +36,11 @@ export default defineConfig(({ command }) => ({
         },
       },
     },
-    outDir: '../dist',
-    emptyOutDir: true,
+    outDir: '../dist', 
+    emptyOutDir: true, 
   },
   plugins: [
-    injectHTML(),
-    FullReload(['./src/**/*.html']),
+    injectHTML(), 
+    FullReload(['./src/**/*.html']), 
   ],
 }));
