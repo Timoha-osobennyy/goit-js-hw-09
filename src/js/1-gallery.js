@@ -1,7 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+import 'Simplelightbox/dist/simple-lightbox.min.css';
 
-// Array of gallery images
 const images = [
   {
     preview:
