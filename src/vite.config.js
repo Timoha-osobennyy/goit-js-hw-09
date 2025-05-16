@@ -12,7 +12,7 @@ glob.sync('./src/*.html').forEach(file => {
 
 export default defineConfig(({ command }) => ({
   define: {
-    [command === 'serve' ? 'global' : '_global']: {}, // или убери, если не используешь
+    [command === 'serve' ? 'global' : '_global']: {}, 
   },
   root: 'src',
   build: {
