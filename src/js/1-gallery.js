@@ -1,7 +1,5 @@
-// Import SimpleLightbox library
-import SimpleLightbox from "simplelightbox";
-// Import additional styles
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 // Array of gallery images
 const images = [
@@ -70,34 +68,21 @@ const images = [
   },
 ];
 
-// Function to create gallery markup
-function createGalleryMarkup(images) {
-  return images
-    .map(
-      ({ preview, original, description }) => `
-      <li class="gallery-item">
-        <a class="gallery-link" href="${original}">
-          <img 
-            class="gallery-image" 
-            src="${preview}" 
-            alt="${description}" 
-          />
-        </a>
-      </li>
-    `
-    )
-    .join("");
-}
+const gallery = document.querySelector('.gallery');
 
-// Get gallery container
-const galleryContainer = document.querySelector(".gallery");
+gallery.innerHTML = images
+  .map(
+    ({ preview, original, description }) => `
+    <li class="gallery-item">
+      <a class="gallery-link" href="${original}">
+        <img class="gallery-image" src="${preview}" alt="${description}" />
+      </a>
+    </li>
+  `
+  )
+  .join('');
 
-// Add gallery markup to the container
-galleryContainer.innerHTML = createGalleryMarkup(images);
-
-// Initialize SimpleLightbox
-const lightbox = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
-  captionPosition: 'bottom',
 });
