@@ -1,2 +1,0 @@
-import"./assets/styles-_59rMWw2.js";import{S as r}from"./assets/vendor-g6-w1428.js";async function s(){const n=document.querySelectorAll("load[src]");for(const e of n){const o=e.getAttribute("src");if(o)try{const t=await fetch(o);if(t.ok){const a=await t.text();e.innerHTML=a}else e.innerHTML=`<p style="color:red">Ошибка загрузки: ${t.status}</p>`}catch(t){e.innerHTML=`<p style="color:red">Ошибка загрузки: ${t.message}</p>`}}}document.addEventListener("DOMContentLoaded",s);new r(".gallery a",{captionsData:"alt",captionDelay:250});
-//# sourceMappingURL=index.js.map
